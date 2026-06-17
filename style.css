@@ -68,4 +68,9 @@ nav a:hover {
 
 .banner p {
     font-size: 18px;
+} .movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
