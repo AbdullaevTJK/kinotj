@@ -9,11 +9,8 @@
 <body>
 
 <header>
-    <h1>KinoTJ</h1>
-<div class="banner">
-    <h2>Филмҳои навтарини тоҷикӣ ва хориҷӣ</h2>
-    <p>Тамошо кунед ва лаззат баред!</p>
-</div>
+    <div class="logo">🎬 KinoTJ</div>
+
     <nav>
         <a href="#">Асосӣ</a>
         <a href="#">Филмҳо</a>
@@ -21,39 +18,48 @@
         <a href="#">Тамос</a>
     </nav>
 </header>
-<div style="padding:20px;">
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Ҷустуҷӯи филм..."
-        style="width:300px; padding:10px;">
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Филмҳо ва сериалҳои беҳтарин</h1>
+        <p>Тамошои филмҳои навтарин бо забонҳои тоҷикӣ ва русӣ</p>
+        <button>Тамошо кунед</button>
+    </div>
+</section>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Ҷустуҷӯи филм...">
 </div>
+
+<h2 class="section-title">Филмҳои машҳур</h2>
+
 <div class="movies" id="movies">
 
     <div class="movie">
-        <img src="images/ecb8a2908e5d0f56a6be0d5b42d701cf.jpg" alt="Аватар">
-        <h3>
-    <a href="avatar.html">Аватар</a>
-</h3>
+        <img src="images/ecb8a2908e5d0f56a6be0d5b42d701cf.jpg" alt="Avatar">
+        <h3><a href="avatar.html">Аватар</a></h3>
         <p>Фантастика</p>
     </div>
 
     <div class="movie">
-        <img src="images/w1500_52631592.jpg" alt="Филм">
-        <h3> 
-     <a href="farsaj.html">Форсаж</a> </h3>
+        <img src="images/w1500_52631592.jpg" alt="Forsaj">
+        <h3><a href="farsaj.html">Форсаж</a></h3>
         <p>Боевик</p>
     </div>
 
     <div class="movie">
-        <img src="images/4Lz8IPpxpzLZ0mkGrGA.jpeg" alt="Филм">
-        <h3> 
-     <a href="titanik.html">Титаник</a> 
-        </h3>
+        <img src="images/4Lz8IPpxpzLZ0mkGrGA.jpeg" alt="Titanik">
+        <h3><a href="titanik.html">Титаник</a></h3>
         <p>Драма</p>
-    </div> 
-    <script src="script.js"></script> 
-</body>
-</html> <br><br><br> <footer>
-    <p>© 2026 KinoTJ. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 KinoTJ | Ҳамаи ҳуқуқҳо ҳифз шудаанд</p>
 </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
