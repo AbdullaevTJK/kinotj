@@ -42,9 +42,30 @@
             Филми машҳур дар бораи ишқи бачаи камбагал ба духтари бой дар киштии калонтарини руи дунё ва гарқшавии он.
         </p>
 
-        <button class="watch-btn">
-            ▶ Тамошо
-        </button>
+         <h3>Трейлер</h3>
+
+ <button class="watch-btn" onclick="openTrailer()">
+    ▶ Тамошо
+</button>
+
+<div id="trailerModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeTrailer()">
+            ✖
+        </span>
+
+        <iframe
+        id="trailerFrame"
+        src=""
+        title="Trailer"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
 
     </div>
 
@@ -53,6 +74,25 @@
 <footer>
     <p>© 2026 KinoTJ</p>
 </footer>
+<script>
 
+function openTrailer() {
+
+    document.getElementById("trailerModal").style.display = "block";
+
+    document.getElementById("trailerFrame").src =
+    "https://www.youtube.com/embed/kVrqfYjkTdQ?autoplay=1";
+
+}
+
+function closeTrailer() {
+
+    document.getElementById("trailerModal").style.display = "none";
+
+    document.getElementById("trailerFrame").src = "";
+
+}
+
+</script>
 </body>
 </html>
