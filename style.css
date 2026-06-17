@@ -134,4 +134,49 @@ footer{
     background:#222;
     text-align:center;
     padding:20px;
+} .movie-page{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:40px;
+}
+
+.poster img{
+    width:300px;
+    border-radius:10px;
+}
+
+.movie-info{
+    max-width:700px;
+}
+
+.movie-info h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.rating{
+    font-size:22px;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.movie-info p{
+    margin-bottom:10px;
+    line-height:1.7;
+}
+
+.watch-btn{
+    margin-top:20px;
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.watch-btn:hover{
+    background:#ff2d3a;
 }
