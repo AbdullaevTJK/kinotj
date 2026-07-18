@@ -1,100 +1,142 @@
 <!DOCTYPE html>
 <html lang="tg">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>KinoTJ</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <header>
-    <div class="logo">🎬 KinoTJ</div>
+
+    <div class="logo">
+        🎬 KinoTJ
+    </div>
 
     <nav>
-        <a href="#">Асосӣ</a>
-        <a href="#">Филмҳо</a>
-        <a href="#">Сериалҳо</a>
-        <a href="#">Тамос</a>
-    </nav>
-</header>
 
-<section class="hero">
+        <a href="index.html">Асосӣ</a>
+
+        <a href="#">Филмҳо</a>
+
+        <a href="#">Сериалҳо</a>
+
+        <a href="#">Тамос</a>
+
+    </nav>
+
+</header> 
+<section class="hero-movie" id="heroMovie">
+
     <div class="hero-content">
-        <h1>Филмҳо ва сериалҳои беҳтарин</h1>
-        <p>Тамошои филмҳои навтарин бо забонҳои тоҷикӣ ва русӣ</p>
-        <button>Тамошо кунед</button>
+
+        <h1 id="heroTitle">Interstellar</h1>
+
+        <div class="hero-rating" id="heroRating">
+            ⭐ IMDb: 8.7/10
+        </div>
+
+        <p id="heroDescription">
+            Гурӯҳи кайҳоннавардон барои ёфтани сайёраи нав
+            ба саёҳати хатарнок мераванд.
+        </p>
+
+        <button class="watch-btn"
+                id="heroWatch"
+                onclick="openTrailer('zSWdZVtXT7E')">
+
+            ▶ Тамошо
+
+        </button>
+
+        <button class="info-btn"
+                id="heroInfo">
+
+            ℹ Маълумоти бештар
+
+        </button>
+
     </div>
-</section>
+
+</section> 
 
 <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Ҷустуҷӯи филм...">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Ҷустуҷӯи филм...">
+
 </div>
 
-<h2 class="section-title">Филмҳои машҳур</h2>
+<h2 class="section-title">
 
-<div class="movies" id="movies">
+    🎬 Филмҳои машҳур
 
-    <div class="movie">
-        <img src="images/ecb8a2908e5d0f56a6be0d5b42d701cf.jpg" alt="Avatar">
-        <h3><a href="avatar.html">Аватар</a></h3>
-        <p>Фантастика</p>
-    </div>
+</h2>
+<div class="movies">
+<div class="movie">
+    <a href="avatar.html">
+        <img src="images/avatar.jpg" alt="Avatar">
+        <h3>Avatar</h3>
+        <p>⭐ IMDb: 7.9</p>
+        <p>Фантастика • 2009</p>
+    </a>
+</div>
 
-    <div class="movie">
-        <img src="images/w1500_52631592.jpg" alt="Forsaj">
-        <h3><a href="farsaj.html">Форсаж</a></h3>
-        <p>Боевик</p>
-    </div>
+<div class="movie">
+    <a href="farsaj.html">
+        <img src="images/furious.jpg" alt="Fast & Furious">
+        <h3>Fast & Furious</h3>
+        <p>⭐ IMDb: 7.1</p>
+        <p>Боевик • 2009</p>
+    </a>
+</div>
 
-    <div class="movie">
-        <img src="images/4Lz8IPpxpzLZ0mkGrGA.jpeg" alt="Titanik">
-        <h3><a href="titanik.html">Титаник</a></h3>
-        <p>Драма</p>
-    </div>
+<div class="movie">
+    <a href="titanik.html">
+        <img src="images/titanic.jpg" alt="Titanic">
+        <h3>Titanic</h3>
+        <p>⭐ IMDb: 7.9</p>
+        <p>Драма • 1997</p>
+    </a>
+</div>
 
-    <div class="movie">
+<div class="movie">
     <a href="interstellar.html">
         <img src="images/interstellar.jpg" alt="Interstellar">
-
         <h3>Interstellar</h3>
-
         <p>⭐ IMDb: 8.7</p>
-
         <p>Фантастика • 2014</p>
     </a>
 </div>
 
- <div class="movie">
+<div class="movie">
     <a href="darkknight.html">
         <img src="images/darkknight.jpg" alt="The Dark Knight">
-
         <h3>The Dark Knight</h3>
-
         <p>⭐ IMDb: 9.0</p>
-
         <p>Боевик • 2008</p>
     </a>
 </div>
 
- <div class="movie">
+<div class="movie">
     <a href="spiderman.html">
-        <img src="images/spiderman.jpg" alt="Spider-Man: No Way Home">
-
+        <img src="images/spiderman.jpg" alt="Spider-Man">
         <h3>Spider-Man: No Way Home</h3>
-
         <p>⭐ IMDb: 8.2</p>
-
-        <p>Боевик • Фантастика • 2021</p>
+        <p>Фантастика • 2021</p>
     </a>
 </div>
 </div>
 
-<footer>
-    <p>© 2026 KinoTJ | Ҳамаи ҳуқуқҳо ҳифз шудаанд</p>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+</div>

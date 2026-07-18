@@ -218,4 +218,78 @@ footer{
     font-size:35px;
     color:white;
     cursor:pointer;
+} 
+.hero-movie{
+
+    height:500px;
+
+    background:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.3)
+    ),
+    url("images/interstellar.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:50px;
+
+}
+
+
+.hero-content{
+
+    max-width:500px;
+
+}
+
+
+.hero-content h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+
+.hero-rating{
+
+    color:gold;
+    font-size:22px;
+    margin-bottom:15px;
+
+}
+
+
+.hero-content p{
+
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:25px;
+
+}
+
+
+.info-btn{
+
+    margin-left:15px;
+
+    background:#555;
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    font-size:18px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
 }
