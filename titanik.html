@@ -44,7 +44,7 @@
 
          <h3>Трейлер</h3>
 
- <button class="watch-btn" onclick="openTrailer()">
+ <button class="watch-btn" onclick="openTrailer('kVrqfYjkTdQ')">
     ▶ Тамошо
 </button>
 
@@ -74,25 +74,9 @@
 <footer>
     <p>© 2026 KinoTJ</p>
 </footer> 
-<script>
+<script src="script.js"></script>
 
-function openTrailer() {
-
-    document.getElementById("trailerModal").style.display = "block";
-
-    document.getElementById("trailerFrame").src =
-    "https://www.youtube.com/embed/kVrqfYjkTdQ?autoplay=1";
-
-}
-
-function closeTrailer() {
-
-    document.getElementById("trailerModal").style.display = "none";
-
-    document.getElementById("trailerFrame").src = "";
-
-}
-
-</script>
+</body>
+</html>
 </body>
 </html>
