@@ -47,51 +47,58 @@ window.onclick = function(event) {
 
 } 
 const heroMovies = [
-    {
-        title: "Interstellar",
-        rating: "⭐ IMDb: 8.7/10",
-        description: "Гурӯҳи кайҳоннавардон барои ёфтани сайёраи нав ба саёҳати хатарнок мераванд.",
-        image: "images/interstellar.jpg",
-        trailer: "zSWdZVtXT7E"
-    },
+  {
+    title: "Interstellar",
+    rating: "⭐ IMDb: 8.7/10",
+    description: "Гурӯҳи кайҳоннавардон барои ёфтани сайёраи нав ба саёҳати хатарнок мераванд.",
+    image: "images/interstellar.jpg",
+    trailer: "zSWdZVtXT7E",
+    page: "interstellar.html"
+},
 
-    {
-        title: "The Dark Knight",
-        rating: "⭐ IMDb: 9.0/10",
-        description: "Батман бо душмани хатарнок — Ҷокер рӯ ба рӯ мешавад.",
-        image: "images/darkknight.jpg",
-        trailer: "EXeTwQWrcwY"
-    },
+{
+    title: "The Dark Knight",
+    rating: "⭐ IMDb: 9.0/10",
+    description: "Батман бо Ҷокер рӯ ба рӯ мешавад.",
+    image: "images/darkknight.jpg",
+    trailer: "EXeTwQWrcwY",
+    page: "darkknight.html"
+},
 
-    {
-        title: "Spider-Man: No Way Home",
-        rating: "⭐ IMDb: 8.2/10",
-        description: "Питер Паркер ба саёҳати ҷаҳони бисёрҷаҳонӣ ворид мешавад.",
-        image: "images/spiderman.jpg",
-        trailer: "JfVOs4VSpmA"
-    }, 
-    {
+{
+    title: "Spider-Man: No Way Home",
+    rating: "⭐ IMDb: 8.2/10",
+    description: "Питер Паркер ба ҷаҳони бисёрҷаҳонӣ ворид мешавад.",
+    image: "images/spiderman.jpg",
+    trailer: "JfVOs4VSpmA",
+    page: "spiderman.html"
+},
+
+{
     title: "Avatar",
     rating: "⭐ IMDb: 7.9/10",
-    description: "Дар сайёраи Пандора мубориза байни одамон ва сокинони маҳаллӣ оғоз мешавад.",
+    description: "Ҷейк Салли барои ҳифзи сайёраи Пандора мубориза мебарад.",
     image: "images/avatar.jpg",
-    trailer: "5PSNL1qE6VY"
+    trailer: "5PSNL1qE6VY",
+    page: "avatar.html"
 },
 
 {
     title: "Titanic",
     rating: "⭐ IMDb: 7.9/10",
-    description: "Ҳикояи муҳаббат дар киштии машҳури Titanic.",
+    description: "Ҳикояи муҳаббати Ҷек ва Роуз дар киштии Titanic.",
     image: "images/titanic.jpg",
-    trailer: "CHekzSiZjrY"
+    trailer: "CHekzSiZjrY",
+    page: "titanik.html"
 },
 
 {
     title: "Fast & Furious",
     rating: "⭐ IMDb: 7.1/10",
-    description: "Суръат, мошинҳо ва гурӯҳи дӯстони қавӣ.",
+    description: "Мусобиқаҳои суръат ва саргузаштҳои Доминик Торетто.",
     image: "images/furious.jpg",
-    trailer: "2TAOizOnNPo"
+    trailer: "2TAOizOnNPo",
+    page: "farsaj.html"
 }
 ];
 
@@ -110,15 +117,28 @@ function changeHeroMovie(){
 
     document.getElementById("heroDescription").innerText = movie.description;
 
+ const hero = document.getElementById("heroMovie");
 
-    document.getElementById("heroMovie").style.backgroundImage =
+hero.style.opacity = "0";
+
+setTimeout(() => {
+
+    hero.style.backgroundImage =
     `linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(${movie.image})`;
 
+    hero.style.opacity = "1";
 
-    document.getElementById("heroWatch").onclick = function(){
-        openTrailer(movie.trailer);
-    };
+}, 400);
 
+
+  document.getElementById("heroWatch").onclick = function(){
+    openTrailer(movie.trailer);
+};
+
+
+document.getElementById("heroInfo").onclick = function(){
+    window.location.href = movie.page;
+};
 
     heroIndex++;
 
@@ -128,5 +148,6 @@ function changeHeroMovie(){
 
 }
 
+changeHeroMovie();
 
 setInterval(changeHeroMovie, 5000);
