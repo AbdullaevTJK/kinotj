@@ -75,7 +75,7 @@ nav a:hover{
 
 .search-box{
     text-align:center;
-    margin:30px 0;
+    margin:20px 0 40px 0;
 }
 
 .search-box input{
@@ -381,4 +381,28 @@ footer{
     }
 
 
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.categories button{
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.categories button:hover{
+    background:#ff2d3a;
+    transform:translateY(-2px);
 }
