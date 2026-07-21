@@ -151,3 +151,26 @@ document.getElementById("heroInfo").onclick = function(){
 changeHeroMovie();
 
 setInterval(changeHeroMovie, 5000);
+function filterMovies(category){
+
+    const movies = document.querySelectorAll(".movie");
+
+    movies.forEach(movie => {
+
+        if(category === "all"){
+
+            movie.style.display = "block";
+
+        }else if(movie.classList.contains(category)){
+
+            movie.style.display = "block";
+
+        }else{
+
+            movie.style.display = "none";
+
+        }
+
+    });
+
+}
