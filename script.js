@@ -172,3 +172,51 @@ function filterMovies(category){
     });
 
 }
+const newMovies = [
+{
+title:"Avengers: Endgame",
+image:"images/avengers.jpg",
+rating:"⭐ IMDb: 8.4",
+genre:"Боевик",
+year:"2019",
+page:"avengers.html"
+},
+
+{
+title:"Joker",
+image:"images/joker.jpg",
+rating:"⭐ IMDb: 8.3",
+genre:"Драма",
+year:"2019",
+page:"joker.html"
+}
+];
+const newContainer = document.getElementById("newMoviesContainer");
+
+if(newContainer){
+
+newMovies.forEach(movie => {
+
+newContainer.innerHTML += `
+
+<div class="movie">
+
+<a href="${movie.page}">
+
+<img src="${movie.image}" alt="${movie.title}">
+
+<h3>${movie.title}</h3>
+
+<p>${movie.rating}</p>
+
+<p>${movie.genre} • ${movie.year}</p>
+
+</a>
+
+</div>
+
+`;
+
+});
+
+}
