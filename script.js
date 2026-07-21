@@ -427,3 +427,87 @@ JSON.stringify(favorites)
 location.reload();
 
 }
+
+const continueContainer = document.getElementById("continueWatching");
+const continueTitle = document.getElementById("continueTitle");
+
+if (continueContainer) {
+
+    const lastMovie = JSON.parse(localStorage.getItem("lastMovie"));
+
+    const continueContainer = document.getElementById("continueWatching");
+const continueTitle = document.getElementById("continueTitle");
+
+
+if(continueContainer){
+
+let history = JSON.parse(localStorage.getItem("watchHistory")) || [];
+
+
+if(history.length > 0){
+
+continueTitle.style.display = "block";
+continueContainer.style.display = "grid";
+
+
+history.forEach(movie => {
+
+
+continueContainer.innerHTML += `
+
+<div class="movie">
+
+<a href="${movie.page}">
+
+<img src="${movie.image}" alt="${movie.title}">
+
+<h3>${movie.title}</h3>
+
+<p>▶ Идомаи тамошо</p>
+
+</a>
+
+</div>
+
+`;
+
+});
+
+
+}
+
+}
+
+}
+
+// Автоматик сабти охирин филми тамошошуда
+
+if(document.body.dataset.title){
+
+let history = JSON.parse(localStorage.getItem("watchHistory")) || [];
+
+let movie = {
+    title: document.body.dataset.title,
+    image: document.body.dataset.image,
+    page: document.body.dataset.page
+};
+
+
+// такрориро нест мекунад
+history = history.filter(item => item.title !== movie.title);
+
+
+// филми охиринро ба аввал мегузорад
+history.unshift(movie);
+
+
+// танҳо 20 филми охиринро нигоҳ медорад
+history = history.slice(0,20);
+
+
+localStorage.setItem(
+    "watchHistory",
+    JSON.stringify(history)
+);
+
+}

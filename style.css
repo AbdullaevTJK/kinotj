@@ -410,10 +410,16 @@ footer{
 }
 
 .movies{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    display:flex;
     gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
     padding:20px;
+}
+
+.movie{
+    min-width:220px;
+    flex-shrink:0;
 }
 
 .movies::-webkit-scrollbar{
@@ -502,4 +508,30 @@ transition:.3s;
 
 background:#c62828;
 
+}
+
+.continue-row{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:20px;
+    scroll-behavior:smooth;
+}
+
+.continue-row .movie{
+    min-width:220px;
+    flex-shrink:0;
+}
+.continue-row{
+    display:flex !important;
+    flex-wrap:nowrap;
+    gap:20px;
+    overflow-x:auto;
+    padding:20px;
+}
+
+.continue-row .movie{
+    width:220px;
+    min-width:220px;
+    flex:none;
 }
