@@ -131,9 +131,7 @@ setTimeout(() => {
 }, 400);
 
 
-  document.getElementById("heroWatch").onclick = function(){
-    openTrailer(movie.trailer);
-};
+  
 
 
 document.getElementById("heroInfo").onclick = function(){
