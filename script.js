@@ -374,13 +374,14 @@ favoritesContainer.innerHTML =
 
 }
 
-
+console.log("favorites:", favorites);
+console.log("allMovies:", allMovies.length);
+console.log("favoriteMovies:", favoriteMovies.length);
 favoriteMovies.forEach(movie => {
 
 let movieCard = document.createElement("div");
 
 movieCard.className = "movie";
-
 
 movieCard.innerHTML = `
 
@@ -396,12 +397,33 @@ movieCard.innerHTML = `
 
 </a>
 
-`;
+<button class="remove-btn"
+onclick="removeFavorite('${movie.title}')">
 
+❌ Аз дӯстдошта хориҷ кардан
+
+</button>
+
+`;
 
 favoritesContainer.appendChild(movieCard);
 
 });
 
+
+}
+
+function removeFavorite(title){
+
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+favorites = favorites.filter(movie => movie !== title);
+
+localStorage.setItem(
+"favorites",
+JSON.stringify(favorites)
+);
+
+location.reload();
 
 }

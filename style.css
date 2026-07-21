@@ -448,3 +448,58 @@ footer{
     gap:20px;
     padding:20px;
 }
+/* Favorites page */
+
+#favoritesContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+#favoritesContainer .movie{
+    width: 100%;
+}
+#favoritesContainer{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#favoritesContainer .movie{
+    width: 100%;
+}
+#favoritesContainer{
+    display: grid;
+    grid-template-columns: repeat(6, 220px);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.remove-btn{
+
+width:100%;
+margin-top:10px;
+padding:10px;
+
+background:#e53935;
+color:white;
+
+border:none;
+border-radius:8px;
+
+cursor:pointer;
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.remove-btn:hover{
+
+background:#c62828;
+
+}
