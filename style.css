@@ -117,10 +117,12 @@ nav a:hover{
 }
 
 .movie h3{
-    padding:10px;
+    color:white;
+    padding:0 10px;
 }
 
 .movie p{
+    color:#bbb;
     padding:0 10px 15px;
 }
 
