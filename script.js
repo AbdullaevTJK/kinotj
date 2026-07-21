@@ -1,23 +1,36 @@
 // Ҷустуҷӯ танҳо дар index.html
 const searchInput = document.getElementById("searchInput");
 
-if (searchInput) {
-    searchInput.addEventListener("keyup", function () {
 
-        const filter = searchInput.value.toLowerCase();
-        const movies = document.querySelectorAll(".movie");
+if(searchInput){
 
-        movies.forEach(movie => {
-            const title = movie.querySelector("h3").textContent.toLowerCase();
+searchInput.addEventListener("input", function(){
 
-            if (title.includes(filter)) {
-                movie.style.display = "block";
-            } else {
-                movie.style.display = "none";
-            }
-        });
+let value = searchInput.value.toLowerCase();
 
-    });
+
+document.querySelectorAll(".movie").forEach(movie=>{
+
+
+let text = movie.innerText.toLowerCase();
+
+
+if(text.includes(value)){
+
+movie.style.display="block";
+
+}else{
+
+movie.style.display="none";
+
+}
+
+
+});
+
+
+});
+
 }
 
 // Поп-ап трейлер
