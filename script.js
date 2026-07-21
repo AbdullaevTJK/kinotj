@@ -121,6 +121,12 @@ let heroIndex = 0;
 
 function changeHeroMovie(){
 
+const heroTitle = document.getElementById("heroTitle");
+
+if(!heroTitle){
+    return;
+}
+
     const movie = heroMovies[heroIndex];
 
 
@@ -250,6 +256,9 @@ newContainer.innerHTML += `
 <p>${movie.rating}</p>
 
 <p>${movie.genre} • ${movie.year}</p>
+<button class="fav-btn" onclick="addFavorite('${movie.title}')">
+❤️ Дӯстдошта
+</button>
 
 </a>
 
@@ -258,5 +267,143 @@ newContainer.innerHTML += `
 `;
 
 });
+
+}
+
+function addFavorite(title){
+
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+if(!favorites.includes(title)){
+
+favorites.push(title);
+
+localStorage.setItem(
+"favorites",
+JSON.stringify(favorites)
+);
+
+alert("Ба дӯстдоштаҳо илова шуд ❤️");
+
+}else{
+
+alert("Ин филм аллакай дар дӯстдоштаҳост");
+
+}
+
+}
+
+const oldMovies = [
+
+{
+title:"Avatar",
+image:"images/avatar.jpg",
+rating:"⭐ IMDb: 7.9",
+genre:"Фантастика",
+year:"2009",
+page:"avatar.html"
+},
+
+{
+title:"Fast & Furious",
+image:"images/furious.jpg",
+rating:"⭐ IMDb: 7.1",
+genre:"Боевик",
+year:"2009",
+page:"farsaj.html"
+},
+
+{
+title:"Titanic",
+image:"images/titanic.jpg",
+rating:"⭐ IMDb: 7.9",
+genre:"Драма",
+year:"1997",
+page:"titanik.html"
+},
+
+{
+title:"Interstellar",
+image:"images/interstellar.jpg",
+rating:"⭐ IMDb: 8.7",
+genre:"Фантастика",
+year:"2014",
+page:"interstellar.html"
+},
+
+{
+title:"The Dark Knight",
+image:"images/darkknight.jpg",
+rating:"⭐ IMDb: 9.0",
+genre:"Боевик",
+year:"2008",
+page:"darkknight.html"
+},
+
+{
+title:"Spider-Man: No Way Home",
+image:"images/spiderman.jpg",
+rating:"⭐ IMDb: 8.2",
+genre:"Фантастика",
+year:"2021",
+page:"spiderman.html"
+}
+
+];
+
+const favoritesContainer = document.getElementById("favoritesContainer");
+
+if(favoritesContainer){
+
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+
+let allMovies = [
+...oldMovies,
+...newMovies
+];
+
+
+let favoriteMovies = allMovies.filter(movie =>
+favorites.includes(movie.title)
+);
+
+
+if(favoriteMovies.length === 0){
+
+favoritesContainer.innerHTML =
+"<h3>Ҳоло ягон филм интихоб нашудааст ❤️</h3>";
+
+}
+
+
+favoriteMovies.forEach(movie => {
+
+let movieCard = document.createElement("div");
+
+movieCard.className = "movie";
+
+
+movieCard.innerHTML = `
+
+<a href="${movie.page}">
+
+<img src="${movie.image}" alt="${movie.title}">
+
+<h3>${movie.title}</h3>
+
+<p>${movie.rating}</p>
+
+<p>${movie.genre} • ${movie.year}</p>
+
+</a>
+
+`;
+
+
+favoritesContainer.appendChild(movieCard);
+
+});
+
 
 }

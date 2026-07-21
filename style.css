@@ -419,3 +419,32 @@ footer{
 .movies::-webkit-scrollbar{
     display:none;
 }
+
+.favorites-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+@media(max-width:900px){
+
+.movies{
+    grid-template-columns:repeat(2,220px);
+}
+
+}
+
+
+@media(max-width:500px){
+
+.movies{
+    grid-template-columns:repeat(1,220px);
+}
+
+}
+.favorites-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
