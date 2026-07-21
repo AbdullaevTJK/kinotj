@@ -183,6 +183,33 @@ page:"avengers.html"
 },
 
 {
+title:"Inception",
+image:"images/inception.jpg",
+rating:"⭐ IMDb: 8.8",
+genre:"Фантастика",
+year:"2010",
+page:"inception.html"
+},
+
+{
+title:"John Wick",
+image:"images/johnwick.jpg",
+rating:"⭐ IMDb: 7.4",
+genre:"Боевик",
+year:"2014",
+page:"johnwick.html"
+},
+
+{
+title:"The Matrix",
+image:"images/matrix.jpg",
+rating:"⭐ IMDb: 8.7",
+genre:"Фантастика",
+year:"1999",
+page:"matrix.html"
+},
+
+{
 title:"Joker",
 image:"images/joker.jpg",
 rating:"⭐ IMDb: 8.3",
