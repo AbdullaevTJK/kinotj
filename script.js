@@ -256,12 +256,10 @@ newContainer.innerHTML += `
 <p>${movie.rating}</p>
 
 <p>${movie.genre} • ${movie.year}</p>
+</a>
 <button class="fav-btn" onclick="addFavorite('${movie.title}')">
 ❤️ Дӯстдошта
 </button>
-
-</a>
-
 </div>
 
 `;
